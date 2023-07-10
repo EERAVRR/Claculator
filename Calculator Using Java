@@ -1,0 +1,363 @@
+package Calculator;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+
+public class Calc extends JFrame implements ActionListener{
+	JButton b,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19;
+	JLabel lb;
+	public static void main(String[] args) {
+		
+		Calc frame = new Calc();
+	}
+		
+		public Calc()
+		{
+			Border x = BorderFactory.createLineBorder(Color.cyan, 5);
+	setTitle("Calculator");
+		 lb = new JLabel();
+		lb.setHorizontalTextPosition(JLabel.CENTER);
+		lb.setVerticalTextPosition(JLabel.TOP);
+		lb.setForeground(Color.GREEN);
+		lb.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		lb.setBackground(Color.gray);
+		lb.setOpaque(true);
+		lb.setBorder(x);
+		
+		JPanel wp = new JPanel();
+		lb.setBounds(1,1,480,100);
+		
+		
+		b = new JButton();
+		b.addActionListener(this);
+		b.setText("AC");
+		b.setFocusable(false);
+		b.setFont(new Font("Arial", Font.BOLD, 25));
+		b.setForeground(Color.black);
+		b.setBackground(Color.red);
+		b.setBounds(0,120,100,40);
+		
+		b1 = new JButton();
+		b1.addActionListener(this);
+		b1.setText("Del");
+		b1.setFocusable(false);
+		b1.setFont(new Font("Arial", Font.BOLD, 25));
+		b1.setForeground(Color.black);
+		b1.setBackground(Color.red);
+		b1.setBounds(120,120,100,40);
+		
+		b2 = new JButton();
+		b2.addActionListener(this);
+		b2.setText("%");
+		b2.setFocusable(false);
+		b2.setFont(new Font("Arial", Font.BOLD, 25));
+		b2.setForeground(Color.red);
+		b2.setBackground(Color.black);
+		b2.setBounds(240,120,100,40);
+	
+		b3 = new JButton();
+		b3.addActionListener(this);
+		b3.setText("/");
+		b3.setFocusable(false);
+		b3.setPreferredSize(new Dimension(100, 40));
+		b3.setFont(new Font("Arial", Font.BOLD, 25));
+		b3.setForeground(Color.red);
+		b3.setBackground(Color.black);
+		b3.setBounds(360,120,100,40);
+		
+		b4 = new JButton();
+		b4.addActionListener(this);
+		b4.setText("7");
+		b4.setFocusable(false);
+		b.setPreferredSize(new Dimension(100, 40));
+		b4.setFont(new Font("Arial", Font.BOLD, 25));
+		b4.setForeground(Color.blue);
+		b4.setBackground(Color.orange);
+		b4.setBounds(0,180,100,40);
+		
+		b5 = new JButton();
+		b5.addActionListener(this);
+		b5.setText("8");
+		b5.setFocusable(false);
+		b5.setFont(new Font("Arial", Font.BOLD, 25));
+		b5.setForeground(Color.blue);
+		b5.setBackground(Color.orange);
+		b5.setBounds(120,180,100,40);
+		
+		b6 = new JButton();
+		b6.addActionListener(this);
+		b6.setText("9");
+		b6.setFocusable(false);
+		b6.setFont(new Font("Arial", Font.BOLD, 25));
+		b6.setForeground(Color.blue);
+		b6.setBackground(Color.orange);
+		b6.setBounds(240,180,100,40);
+		
+		b7 = new JButton();
+		b7.addActionListener(this);
+		b7.setText("X");
+		b7.setFocusable(false);
+		b7.setFont(new Font("Arial", Font.BOLD, 25));
+		b7.setForeground(Color.red);
+		b7.setBackground(Color.black);
+		b7.setBounds(360,180,100,40);
+		
+		b8 = new JButton();
+		b8.addActionListener(this);
+		b8.setText("4");
+		b8.setFocusable(false);
+		b8.setFont(new Font("Arial", Font.BOLD, 25));
+		b8.setForeground(Color.blue);
+		b8.setBackground(Color.orange);
+		b8.setBounds(0,240,100,40);
+		
+		b9 = new JButton();
+		b9.addActionListener(this);
+		b9.setText("5");
+		b9.setFocusable(false);
+		b9.setFont(new Font("Arial", Font.BOLD, 25));
+		b9.setForeground(Color.blue);
+		b9.setBackground(Color.orange);
+		b9.setBounds(120,240,100,40);
+		
+		b10 = new JButton();
+		b10.addActionListener(this);
+		b10.setText("6");
+		b10.setFocusable(false);
+		b10.setFont(new Font("Arial", Font.BOLD, 25));
+		b10.setForeground(Color.blue);
+		b10.setBackground(Color.orange);
+		b10.setBounds(240,240,100,40);
+		
+		b11 = new JButton();
+		b11.addActionListener(this);
+		b11.setText("-");
+		b11.setFocusable(false);
+		b11.setFont(new Font("Arial", Font.BOLD, 25));
+		b11.setForeground(Color.red);
+		b11.setBackground(Color.black);
+		b11.setBounds(360,240,100,40);
+
+		
+		b12 = new JButton();
+		b12.addActionListener(this);
+		b12.setText("1");
+		b12.setFocusable(false);
+		b12.setFont(new Font("Arial", Font.BOLD, 25));
+		b12.setForeground(Color.BLUE);
+		b12.setBackground(Color.ORANGE);
+		b12.setBounds(0, 300, 100, 40);
+
+		b13 = new JButton();
+		b13.addActionListener(this);
+		b13.setText("2");
+		b13.setFocusable(false);
+		b13.setFont(new Font("Arial", Font.BOLD, 25));
+		b13.setForeground(Color.BLUE);
+		b13.setBackground(Color.ORANGE);
+		b13.setBounds(120, 300, 100, 40);
+
+		b14 = new JButton();
+		b14.addActionListener(this);
+		b14.setText("3");
+		b14.setFocusable(false);
+		b14.setFont(new Font("Arial", Font.BOLD, 25));
+		b14.setForeground(Color.BLUE);
+		b14.setBackground(Color.ORANGE);
+		b14.setBounds(240, 300, 100, 40);
+
+		b15 = new JButton();
+		b15.addActionListener(this);
+		b15.setText("+");
+		b15.setFocusable(false);
+		b15.setFont(new Font("Arial", Font.BOLD, 25));
+		b15.setForeground(Color.RED);
+		b15.setBackground(Color.BLACK);
+		b15.setBounds(360, 300, 100, 40);
+		
+		
+		b16 = new JButton();
+		b16.addActionListener(this);
+		b16.setText("#");
+		b16.setFocusable(false);
+		b16.setFont(new Font("Arial", Font.BOLD, 25));
+		b16.setForeground(Color.BLUE);
+		b16.setBackground(Color.ORANGE);
+		b16.setBounds(0, 360, 100, 40);
+		
+		b17 = new JButton();
+		b17.addActionListener(this);
+		b17.setText("0");
+		b17.setFocusable(false);
+		b17.setFont(new Font("Arial", Font.BOLD, 25));
+		b17.setForeground(Color.BLUE);
+		b17.setBackground(Color.ORANGE);
+		b17.setBounds(120, 360, 100, 40);
+		
+		b18 = new JButton();
+		b18.addActionListener(this);
+		b18.setText(".");
+		b18.setFocusable(false);
+		b18.setFont(new Font("Arial", Font.BOLD, 25));
+		b18.setForeground(Color.BLUE);
+		b18.setBackground(Color.ORANGE);
+		b18.setBounds(240, 360, 100, 40);
+	
+		b19 = new JButton();
+		b19.addActionListener(this);
+		b19.setText("=");
+		b19.setFocusable(false);
+		b19.setFont(new Font("Arial", Font.BOLD, 25));
+		b19.setForeground(Color.RED);
+		b19.setBackground(Color.BLACK);
+		b19.setBounds(360, 360, 100, 40);
+		
+		
+		JPanel wpp = new JPanel();
+		wpp.setLayout(null);
+		wpp.setPreferredSize(new Dimension(500,300));
+		
+		wpp.add(lb);
+		wpp.add(b);
+		wpp.add(b1);
+		wpp.add(b2);
+		wpp.add(b3);
+		wpp.add(b4);
+		wpp.add(b5);
+		wpp.add(b6);
+		wpp.add(b7);
+		wpp.add(b8);
+		wpp.add(b9);
+		wpp.add(b10);
+		wpp.add(b11);
+		wpp.add(b12);
+		wpp.add(b13);
+		wpp.add(b14);
+		wpp.add(b15);
+		wpp.add(b16);
+		wpp.add(b17);
+		wpp.add(b18);
+		wpp.add(b19);
+		add(wpp);
+	
+	 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	 setVisible(true);
+	 //top panel
+	 setSize(490, 495);
+	 setResizable(true);
+		
+		
+		
+		
+		}
+		private double evaluateExpression(String expression) {
+		    String[] tokens = expression.split(" "); 
+		  //EXTRACTING THE FIRST OPERAND
+		    double a = Double.parseDouble(tokens[0]); 
+		    
+		    //EXTRACTING THE OPERATOR
+		    String operator = tokens[1]; 
+		    
+		    //EXTRACTING THE SECOND OPERAND
+		    double aa = Double.parseDouble(tokens[2]); 
+
+		    double res = 0.0;
+
+		   
+		    switch (operator) {
+		        case "+":
+		            res = a + aa;
+		            break;
+		        case "-":
+		            res = a - aa;
+		            break;
+		        case "X":
+		            res = a * aa;
+		            break;
+		        case "/":
+		            res = a / aa;
+		            break;
+		        case "%":
+		            res = a % aa;
+		            break;
+
+		        default:
+		            throw new IllegalArgumentException("Invalid operator: " + operator);
+		    }
+
+		    return res;
+		}
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+	      if (e.getSource() == b) {
+	            lb.setText("");
+	        } else if (e.getSource() == b1) {
+	            String currentText = lb.getText();
+	            if (!currentText.isEmpty()) {
+	                lb.setText(currentText.substring(0, currentText.length() - 1));
+	            }
+	        } else if (e.getSource() == b2) {
+	            lb.setText(lb.getText() + " % ");
+	        } else if (e.getSource() == b3) {
+	            lb.setText(lb.getText() + " / ");
+	        } else if (e.getSource() == b4) {
+	            lb.setText(lb.getText() + "7");
+	        } else if (e.getSource() == b5) {
+	            lb.setText(lb.getText() + "8");
+	        } else if (e.getSource() == b6) {
+	            lb.setText(lb.getText() + "9");
+	        } else if (e.getSource() == b7) {
+	            lb.setText(lb.getText() + " X ");
+	        } else if (e.getSource() == b8) {
+	            lb.setText(lb.getText() + "4");
+	        } else if (e.getSource() == b9) {
+	            lb.setText(lb.getText() + "5");
+	        } else if (e.getSource() == b10) {
+	            lb.setText(lb.getText() + "6");
+	        } else if (e.getSource() == b11) {
+	            lb.setText(lb.getText() + " - ");
+	        } else if (e.getSource() == b12) {
+	            lb.setText(lb.getText() + "1");
+	        } else if (e.getSource() == b13) {
+	            lb.setText(lb.getText() + "2");
+	        } else if (e.getSource() == b14) {
+	            lb.setText(lb.getText() + "3");
+	        } else if (e.getSource() == b15) {
+	            lb.setText(lb.getText() + " + ");
+	        } else if (e.getSource() == b16) {
+	            lb.setText(lb.getText() + " # "); //this doesn't perform any function
+	        } else if (e.getSource() == b17) {
+	            lb.setText(lb.getText() + "0");
+	        } else if (e.getSource() == b18) {
+	        	String ct = lb.getText();
+	           if(!ct.contains("."))
+	           {
+	        	lb.setText(lb.getText() + ".");
+	            
+	            }
+	           
+	        } else if (e.getSource() == b19) {
+	        	
+	        	String expression = lb.getText();
+	        	try 
+	        	{
+	        		double res = evaluateExpression(expression);
+	        		lb.setText(Double.toString(res));
+	        		lb.setText(lb.getText() + " ");
+	        	}
+	        	catch(IllegalArgumentException eex)
+	        	{
+	        		JOptionPane.showMessageDialog(this, "Invalid Expression" + "Error"+JOptionPane.ERROR_MESSAGE);
+	        	}
+	           
+	        }
+	    }
+	}
+
